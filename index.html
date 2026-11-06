@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101820">
+  <title>Управление ботом</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main>
+    <header><div class="mark">✦</div><div><h1>Панель бота</h1><p>Команды и сообщения в ваших чатах</p></div></header>
+    <section class="actions">
+      <button data-action="chats" class="wide secondary">📋 Показать мои чаты</button>
+      <button data-action="morning">🌅 Доброе утро во все чаты</button>
+      <button data-action="night">🌙 Спокойной ночи во все чаты</button>
+    </section>
+    <section class="card">
+      <h2>Написать в чат</h2>
+      <label for="chat">ID чата</label>
+      <input id="chat" inputmode="numeric" placeholder="Например, -1001234567890">
+      <label for="message">Сообщение</label>
+      <textarea id="message" maxlength="4096" rows="4" placeholder="Текст сообщения"></textarea>
+      <button id="send" class="wide primary">Отправить сообщение</button>
+    </section>
+    <p class="hint" id="hint">Нажатие кнопки передаст команду боту в Telegram.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
